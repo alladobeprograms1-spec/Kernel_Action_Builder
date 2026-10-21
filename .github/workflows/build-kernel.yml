@@ -279,10 +279,10 @@ jobs:
         if: github.event.inputs.enable_ksu == 'true' && github.event.inputs.ksu_variant == 'ReSukiSU'
         working-directory: kernel
         run: |
-          curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash -s main
+          curl -LSs "https://raw.githubusercontent.com/LyraVoid/FinaSU/master/kernel/setup.sh" | bash -s main
           echo "KSU_VARIANT=ReSukiSU"                                    >> $GITHUB_ENV
           echo "KSU_BRANCH=main"                                         >> $GITHUB_ENV
-          echo "KSU_REPO=https://github.com/ReSukiSU/ReSukiSU"          >> $GITHUB_ENV
+          echo "KSU_REPO=https://github.com/LyraVoid/FinaSU"          >> $GITHUB_ENV
           if [ "${{ github.event.inputs.enable_susfs }}" == "true" ]; then
             echo "SUSFS_ENABLED=true"               >> $GITHUB_ENV
           else
